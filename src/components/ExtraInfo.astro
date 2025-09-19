@@ -4,36 +4,36 @@
             <!-- Dress Code -->
             <div class="info-card dress-code-card animate-slide-left">
                 <div class="info-icon">
-                    <i class="fas fa-tshirt"></i>
+                    🎄
                 </div>
                 <h3>Dress Code</h3>
-                <p>Elegante</p>
-                <p class="info-description">Te sugerimos vestimenta formal para esta ocasión especial.</p>
+                <p>Elegante Navideño</p>
+                <p class="info-description">¡Ven con tu mejor atuendo navideño! Colores rojos, verdes, dorados o plateados son bienvenidos.</p>
             </div>
 
             <!-- Playlist -->
             <div class="info-card playlist-card animate-fade-in">
                 <div class="info-icon">
-                    <i class="fas fa-music"></i>
+                    🎵
                 </div>
-                <h3>Playlist</h3>
-                <p>¡Ayúdanos con la música!</p>
-                <p class="info-description">Sugiere las canciones que no pueden faltar en nuestra fiesta.</p>
-                <button class="btn btn-primary" id="open-playlist-modal">
-                    <i class="fas fa-plus"></i> Sugerir canción
+                <h3>Playlist Navideña</h3>
+                <p>¡Ayúdanos a crear la playlist navideña perfecta!</p>
+                <p class="info-description">Sugiere villancicos y canciones navideñas que no pueden faltar en nuestra celebración.</p>
+                <button class="btn btn-secondary" id="open-playlist-modal">
+                    Sugerir Canción
                 </button>
             </div>
 
             <!-- Regalos -->
             <div class="info-card gifts-card animate-slide-right">
                 <div class="info-icon">
-                    <i class="fas fa-gift"></i>
+                    🎁
                 </div>
-                <h3>Regalos</h3>
-                <p>Luna de Miel</p>
-                <p class="info-description">Si deseas realizarnos un regalo, puedes colaborar con nuestra luna de miel.</p>
-                <button class="btn btn-primary" id="open-gifts-modal">
-                    <i class="fas fa-info-circle"></i> Ver datos bancarios
+                <h3>Intercambio de Regalos</h3>
+                <p>Tu presencia es nuestro mejor regalo navideño</p>
+                <p class="info-description">Si deseas participar en el intercambio navideño, el límite es de $20.</p>
+                <button class="btn btn-secondary" id="open-gifts-modal">
+                    Ver Detalles
                 </button>
             </div>
         </div>
@@ -43,17 +43,17 @@
     <div class="modal" id="playlist-modal">
         <div class="modal-content">
             <span class="close-modal" id="close-playlist-modal">&times;</span>
-            <h3>Sugerir canción</h3>
+            <h3>🎵 Sugerir canción navideña</h3>
             <form id="playlist-form">
                 <div class="form-group">
-                    <label for="song-name">Nombre de la canción</label>
-                    <input type="text" id="song-name" name="song-name" required>
+                    <label for="song-name">Nombre de la canción navideña</label>
+                    <input type="text" id="song-name" name="song-name" placeholder="Ej: Jingle Bells, All I Want for Christmas..." required>
                 </div>
                 <div class="form-group">
                     <label for="artist">Artista</label>
-                    <input type="text" id="artist" name="artist" required>
+                    <input type="text" id="artist" name="artist" placeholder="Ej: Mariah Carey, Michael Bublé..." required>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar sugerencia</button>
+                <button type="submit" class="btn btn-primary">🎄 Enviar sugerencia</button>
             </form>
         </div>
     </div>
@@ -62,12 +62,12 @@
     <div class="modal" id="gifts-modal">
         <div class="modal-content">
             <span class="close-modal" id="close-gifts-modal">&times;</span>
-            <h3>Datos Bancarios</h3>
+            <h3>🎁 Detalles del Intercambio Navideño</h3>
             <div class="bank-details">
-                <p><strong>Banco:</strong> Banco Ejemplo</p>
-                <p><strong>Titular:</strong> Lucía García y Martín López</p>
-                <p><strong>CBU:</strong> 0000000000000000000000</p>
-                <p><strong>Alias:</strong> BODA.LUCIA.MARTIN</p>
+                <p><strong>Límite de regalo:</strong> $20 USD</p>
+                <p><strong>Tipo:</strong> Intercambio sorpresa</p>
+                <p><strong>Entrega:</strong> Durante la fiesta navideña</p>
+                <p><strong>Sugerencias:</strong> Algo útil, divertido o hecho en casa</p>
             </div>
         </div>
     </div>

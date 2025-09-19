@@ -1,115 +1,344 @@
-<section class="section gallery-section">
+---
+// Calendario de Adviento Interactivo
+---
+
+<section class="advent-calendar-section">
     <div class="container">
-        <h2 class="section-title animate-on-scroll">Nuestra Historia</h2>
-        <div class="gallery-grid animate-fade-in">
-            <!-- Aquí se pueden agregar imágenes reales más adelante -->
-            <div class="gallery-item">
-                <div class="gallery-placeholder" style="background-color: var(--color-primary); color: white;">
-                    <i class="fas fa-image"></i>
-                </div>
+        <h2 class="section-title">🎄 Calendario de Adviento Mágico 🎄</h2>
+        <p class="section-subtitle">¡Descubre una sorpresa cada día hasta nuestra fiesta navideña!</p>
+        
+        <div class="advent-calendar">
+            <!-- Días del calendario de adviento -->
+            <div class="advent-day" data-day="1">
+                <div class="day-number">1</div>
+                <div class="day-content">🎁</div>
+                <div class="day-surprise">¡Primer regalo sorpresa!</div>
             </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder" style="background-color: var(--color-secondary)">
-                    <i class="fas fa-image"></i>
-                </div>
+            <div class="advent-day" data-day="2">
+                <div class="day-number">2</div>
+                <div class="day-content">🍪</div>
+                <div class="day-surprise">Receta de galletas navideñas</div>
             </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder" style="background-color: var(--color-accent)">
-                    <i class="fas fa-image"></i>
-                </div>
+            <div class="advent-day" data-day="3">
+                <div class="day-number">3</div>
+                <div class="day-content">🎵</div>
+                <div class="day-surprise">Villancico del día</div>
             </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder" style="background-color: var(--color-ceremony)">
-                    <i class="fas fa-image"></i>
-                </div>
+            <div class="advent-day" data-day="4">
+                <div class="day-number">4</div>
+                <div class="day-content">❄️</div>
+                <div class="day-surprise">Historia navideña</div>
             </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder" style="background-color: var(--color-party)">
-                    <i class="fas fa-image"></i>
-                </div>
+            <div class="advent-day" data-day="5">
+                <div class="day-number">5</div>
+                <div class="day-content">🎅</div>
+                <div class="day-surprise">Dato curioso de Santa</div>
             </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder" style="background-color: var(--color-gallery)">
-                    <i class="fas fa-image"></i>
-                </div>
+            <div class="advent-day" data-day="6">
+                <div class="day-number">6</div>
+                <div class="day-content">⭐</div>
+                <div class="day-surprise">Deseo navideño</div>
+            </div>
+            <div class="advent-day" data-day="7">
+                <div class="day-number">7</div>
+                <div class="day-content">🔔</div>
+                <div class="day-surprise">Tradición navideña</div>
+            </div>
+            <div class="advent-day" data-day="8">
+                <div class="day-number">8</div>
+                <div class="day-content">🎄</div>
+                <div class="day-surprise">Decoración especial</div>
+            </div>
+            <div class="advent-day" data-day="9">
+                <div class="day-number">9</div>
+                <div class="day-content">🧸</div>
+                <div class="day-surprise">Juguete vintage</div>
+            </div>
+            <div class="advent-day" data-day="10">
+                <div class="day-number">10</div>
+                <div class="day-content">🕯️</div>
+                <div class="day-surprise">Momento de reflexión</div>
+            </div>
+            <div class="advent-day" data-day="11">
+                <div class="day-number">11</div>
+                <div class="day-content">🎪</div>
+                <div class="day-surprise">Actividad divertida</div>
+            </div>
+            <div class="advent-day" data-day="12">
+                <div class="day-number">12</div>
+                <div class="day-content">🌟</div>
+                <div class="day-surprise">Estrella de los deseos</div>
+            </div>
+            <div class="advent-day special-day" data-day="24">
+                <div class="day-number">24</div>
+                <div class="day-content">🎉</div>
+                <div class="day-surprise">¡DÍA DE LA FIESTA!</div>
             </div>
         </div>
-        <div class="gallery-instagram">
-            <p>Síguenos en Instagram para ver más fotos</p>
-            <a href="https://www.instagram.com/" target="_blank" class="instagram-link">
-                <i class="fab fa-instagram"></i> @luciamartin2025
-            </a>
+        
+        <div class="calendar-footer">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <p class="days-remaining">Días hasta la fiesta: <span class="days-count" id="days-remaining">--</span></p>
         </div>
     </div>
 </section>
 
 <style>
-    .gallery-section {
-        background-color: var(--color-gallery);
-    }
+.advent-calendar-section {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, #0f4c3a 0%, #1a5f4a 30%, #2d1b69 70%, #0f4c3a 100%);
+    position: relative;
+    overflow: hidden;
+}
 
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: var(--spacing-md);
-        margin-bottom: var(--spacing-lg);
-    }
+.advent-calendar-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(196, 30, 58, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
 
-    .gallery-item {
-        border-radius: var(--border-radius-md);
-        overflow: hidden;
-        box-shadow: var(--shadow-sm);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        aspect-ratio: 1 / 1;
-    }
+.advent-calendar-section .section-title {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
 
-    .gallery-item:hover {
-        transform: scale(1.03);
-        box-shadow: var(--shadow-md);
-    }
+.section-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.2rem;
+    margin-top: var(--spacing-md);
+    opacity: 0.9;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
 
-    .gallery-placeholder {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--color-text-light);
-        font-size: var(--font-size-2xl);
-        transition: color 0.3s ease;
-    }
+.advent-calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .gallery-placeholder:hover {
-        color: #333;
-    }
+.advent-day {
+    position: relative;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #c41e3a, #d4af37);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
 
-    .gallery-instagram {
-        text-align: center;
-        margin-top: var(--spacing-xl);
-    }
+.advent-day:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
 
-    .instagram-link {
-        display: inline-flex;
-        align-items: center;
-        color: var(--color-text-dark);
-        text-decoration: none;
-        font-weight: 600;
-        margin-top: var(--spacing-sm);
-        transition: color 0.3s ease;
-    }
+.advent-day.special-day {
+    background: linear-gradient(135deg, #d4af37, #ffd700, #ffed4e);
+    grid-column: span 2;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 
-    .instagram-link:hover {
-        color: var(--color-primary);
-    }
+.day-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+}
 
-    .instagram-link i {
-        font-size: var(--font-size-lg);
-        margin-right: var(--spacing-sm);
-    }
+.day-content {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    animation: bounce 2s infinite;
+}
 
-    @media (max-width: 768px) {
-        .gallery-grid {
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        }
+.day-surprise {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: var(--spacing-sm);
+    font-size: 0.8rem;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 15px 15px;
+}
+
+.advent-day:hover .day-surprise {
+    transform: translateY(0);
+}
+
+.calendar-footer {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.calendar-footer p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: var(--spacing-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 8px;
+    background: linear-gradient(90deg, #c41e3a, #d4af37, #228b22);
+    border-radius: 25px;
+    width: 75%;
+    animation: progressGlow 2s ease-in-out infinite alternate;
+}
+
+.progress-text {
+    color: var(--color-text-light);
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+    display: block;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
     }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes progressGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .advent-calendar {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .day-content {
+        font-size: 1.5rem;
+    }
+    
+    .day-number {
+        font-size: 1.2rem;
+    }
+    
+    .advent-day.special-day {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 480px) {
+    .advent-calendar {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .day-content {
+        font-size: 1.2rem;
+    }
+    
+    .day-number {
+        font-size: 1rem;
+    }
+    
+    .advent-day.special-day {
+        grid-column: span 3;
+    }
+    
+    .day-surprise {
+        font-size: 0.7rem;
+    }
+}
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Calcular días restantes hasta la fiesta
+        function updateDaysRemaining() {
+            const eventDate = new Date('December 24, 2024 20:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+            const daysRemaining = Math.ceil(timeLeft / (1000 * 60 * 60 * 24));
+            
+            const daysElement = document.getElementById('days-remaining');
+            if (daysElement) {
+                if (daysRemaining > 0) {
+                    daysElement.textContent = daysRemaining;
+                } else {
+                    daysElement.textContent = '¡HOY ES EL DÍA!';
+                }
+            }
+        }
+        
+        // Actualizar inmediatamente
+        updateDaysRemaining();
+        
+        // Actualizar cada hora
+        setInterval(updateDaysRemaining, 3600000);
+        
+        // Agregar interactividad a los días del calendario
+        const adventDays = document.querySelectorAll('.advent-day');
+        adventDays.forEach(day => {
+            day.addEventListener('click', () => {
+                const dayNumber = day.getAttribute('data-day');
+                const surprise = day.querySelector('.day-surprise').textContent;
+                
+                // Crear un efecto de "apertura" del día
+                day.style.transform = 'scale(1.1)';
+                day.style.boxShadow = '0 20px 40px rgba(255, 215, 0, 0.6)';
+                
+                setTimeout(() => {
+                    day.style.transform = '';
+                    day.style.boxShadow = '';
+                }, 300);
+                
+                // Mostrar alerta con la sorpresa (se puede mejorar con un modal)
+                alert(`🎄 Día ${dayNumber}: ${surprise} 🎄`);
+            });
+        });
+    });
+</script>

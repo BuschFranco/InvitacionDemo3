@@ -1,83 +1,290 @@
 <section class="section rsvp-section">
+    <!-- Decoraciones navideñas flotantes -->
+    <div class="christmas-decorations">
+        <div class="floating-decoration star">⭐</div>
+        <div class="floating-decoration bell">🔔</div>
+        <div class="floating-decoration gift">🎁</div>
+        <div class="floating-decoration tree">🎄</div>
+        <div class="floating-decoration snowman">⛄</div>
+        <div class="floating-decoration candy">🍭</div>
+    </div>
+    
     <div class="container">
-        <h2 class="section-title animate-on-scroll">Confirmación de Asistencia</h2>
-        <p class="rsvp-description animate-fade-in">Esperamos que puedas acompañarnos en este día tan especial. Por favor, confirma tu asistencia antes del 15 de agosto de 2025.</p>
+        <div class="rsvp-header">
+            <h2 class="section-title magical-title animate-on-scroll">
+                <span class="title-word">🎅</span>
+                <span class="title-word">Confirmación</span>
+                <span class="title-word">de</span>
+                <span class="title-word">Asistencia</span>
+                <span class="title-word">🎅</span>
+            </h2>
+            <div class="sparkles">
+                <span class="sparkle">✨</span>
+                <span class="sparkle">✨</span>
+                <span class="sparkle">✨</span>
+            </div>
+        </div>
+        
+        <p class="rsvp-description animate-fade-in">
+            ¡Esperamos que puedas acompañarnos en esta mágica celebración navideña! 
+            <br>Por favor, confirma tu asistencia antes del <strong>20 de diciembre de 2024</strong>.
+        </p>
         
         <form class="rsvp-form animate-slide-left" id="rsvp-form">
             <div class="form-group">
-                <label for="name">Nombre y Apellido</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name">🎅 Nombre y Apellido</label>
+                <div class="input-wrapper">
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                    <span class="input-icon">👤</span>
+                </div>
             </div>
             
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">📧 Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    <span class="input-icon">✉️</span>
+                </div>
             </div>
             
             <div class="form-group">
-                <label for="phone">Teléfono</label>
-                <input type="tel" id="phone" name="phone" required>
+                <label for="phone">📱 Teléfono</label>
+                <div class="input-wrapper">
+                    <input type="tel" id="phone" name="phone" required placeholder="Tu número de teléfono">
+                    <span class="input-icon">📞</span>
+                </div>
             </div>
             
             <div class="form-group">
-                <label>¿Asistirás?</label>
+                <label>🎄 ¿Asistirás a nuestra celebración?</label>
                 <div class="radio-group">
-                    <label class="radio-label">
+                    <label class="radio-label festive-option yes-option">
                         <input type="radio" name="attendance" value="yes" required>
-                        <span>Sí, asistiré</span>
+                        <span class="radio-custom"></span>
+                        <span class="radio-text">🎄 ¡Sí, estaré ahí para celebrar!</span>
                     </label>
-                    <label class="radio-label">
+                    <label class="radio-label festive-option no-option">
                         <input type="radio" name="attendance" value="no">
-                        <span>No podré asistir</span>
+                        <span class="radio-custom"></span>
+                        <span class="radio-text">😔 No podré asistir</span>
                     </label>
                 </div>
             </div>
             
             <div class="form-group" id="guests-group">
-                <label for="guests">Número de invitados (incluyéndote)</label>
-                <select id="guests" name="guests">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
+                <label for="guests">👥 Número de invitados (incluyéndote)</label>
+                <div class="select-wrapper">
+                    <select id="guests" name="guests">
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                    </select>
+                    <span class="select-icon">🎁</span>
+                </div>
             </div>
             
             <div class="form-group">
-                <label for="message">Mensaje para los novios (opcional)</label>
-                <textarea id="message" name="message" rows="3"></textarea>
+                <label for="message">💌 Mensaje navideño (opcional)</label>
+                <div class="textarea-wrapper">
+                    <textarea id="message" name="message" rows="3" placeholder="Comparte tus deseos navideños o algún mensaje especial..."></textarea>
+                    <span class="textarea-icon">🎄</span>
+                </div>
             </div>
             
-            <button type="submit" class="btn btn-primary rsvp-submit">Confirmar Asistencia</button>
+            <button type="submit" class="btn btn-primary rsvp-submit magical-button">
+                <span class="button-text">🎅 Confirmar Asistencia 🎁</span>
+                <div class="button-sparkles">
+                    <span>✨</span>
+                    <span>⭐</span>
+                    <span>✨</span>
+                </div>
+            </button>
         </form>
         
         <div class="rsvp-confirmation" id="rsvp-confirmation" style="display: none;">
             <i class="fas fa-check-circle"></i>
-            <h3>¡Gracias por confirmar!</h3>
-            <p>Hemos recibido tu confirmación. ¡Nos vemos en la boda!</p>
+            <h3>🎄 ¡Gracias por confirmar! 🎄</h3>
+            <p>Hemos recibido tu confirmación. ¡Nos vemos en la fiesta navideña! 🎅🎁</p>
         </div>
     </div>
 </section>
 
 <style>
     .rsvp-section {
-        background-color: var(--color-rsvp);
+        background: linear-gradient(135deg, 
+            #0f4c75 0%, 
+            #3282b8 25%, 
+            #0f4c75 50%, 
+            #1e3a8a 75%, 
+            #0f4c75 100%);
+        background-size: 400% 400%;
+        animation: gradientShift 8s ease-in-out infinite;
         padding: var(--spacing-xl) 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .rsvp-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(196, 30, 58, 0.1) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    
+    /* Decoraciones navideñas flotantes */
+    .christmas-decorations {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .floating-decoration {
+        position: absolute;
+        font-size: 2rem;
+        animation: float 6s ease-in-out infinite;
+        opacity: 0.7;
+    }
+    
+    .floating-decoration.star {
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+    
+    .floating-decoration.bell {
+        top: 20%;
+        right: 15%;
+        animation-delay: 1s;
+    }
+    
+    .floating-decoration.gift {
+        bottom: 30%;
+        left: 5%;
+        animation-delay: 2s;
+    }
+    
+    .floating-decoration.tree {
+        bottom: 20%;
+        right: 10%;
+        animation-delay: 3s;
+    }
+    
+    .floating-decoration.snowman {
+        top: 60%;
+        left: 85%;
+        animation-delay: 4s;
+    }
+    
+    .floating-decoration.candy {
+        top: 80%;
+        left: 20%;
+        animation-delay: 5s;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(10deg); }
+    }
+    
+    @keyframes gradientShift {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+    
+    /* Header mejorado */
+    .rsvp-header {
+        text-align: center;
+        margin-bottom: var(--spacing-lg);
+        position: relative;
+        z-index: 2;
+    }
+    
+    .magical-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .title-word {
+        display: inline-block;
+        animation: bounce 2s ease-in-out infinite;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: bold;
+    }
+    
+    .title-word:nth-child(1) { animation-delay: 0s; }
+    .title-word:nth-child(2) { animation-delay: 0.2s; }
+    .title-word:nth-child(3) { animation-delay: 0.4s; }
+    .title-word:nth-child(4) { animation-delay: 0.6s; }
+    .title-word:nth-child(5) { animation-delay: 0.8s; }
+    
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+    }
+    
+    .sparkles {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .sparkle {
+        font-size: 1.5rem;
+        animation: twinkle 1.5s ease-in-out infinite;
+    }
+    
+    .sparkle:nth-child(1) { animation-delay: 0s; }
+    .sparkle:nth-child(2) { animation-delay: 0.5s; }
+    .sparkle:nth-child(3) { animation-delay: 1s; }
+    
+    @keyframes twinkle {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.2); }
     }
     
     .rsvp-description {
         text-align: center;
         max-width: 600px;
         margin: 0 auto var(--spacing-lg);
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        position: relative;
+        z-index: 2;
     }
     
     .rsvp-form {
         max-width: 500px;
         margin: 0 auto;
-        background-color: var(--color-background);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
         padding: var(--spacing-lg);
-        border-radius: var(--border-radius-lg);
-        box-shadow: var(--shadow-md);
+        border-radius: 20px;
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.3),
+            0 0 0 1px rgba(255, 255, 255, 0.2);
+        position: relative;
+        z-index: 2;
+        border: 2px solid rgba(255, 215, 0, 0.3);
     }
     
     .form-group {
@@ -87,44 +294,166 @@
     .form-group label {
         display: block;
         margin-bottom: var(--spacing-xs);
-        font-weight: 500;
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1rem;
     }
     
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+    /* Input wrappers mejorados */
+    .input-wrapper,
+    .select-wrapper,
+    .textarea-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    .input-wrapper input,
+    .select-wrapper select,
+    .textarea-wrapper textarea {
         width: 100%;
-        padding: var(--spacing-sm);
-        border: 1px solid #ddd;
-        border-radius: var(--border-radius-sm);
+        padding: var(--spacing-sm) 3rem var(--spacing-sm) var(--spacing-sm);
+        border: 2px solid #e1e8ed;
+        border-radius: 12px;
         font-family: var(--font-family-primary);
         font-size: var(--font-size-md);
+        transition: all 0.3s ease;
+        background: white;
     }
     
-    .form-group textarea {
+    .input-wrapper input:focus,
+    .select-wrapper select:focus,
+    .textarea-wrapper textarea:focus {
+        outline: none;
+        border-color: #c41e3a;
+        box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+        transform: translateY(-2px);
+    }
+    
+    .input-icon,
+    .select-icon,
+    .textarea-icon {
+        position: absolute;
+        right: 1rem;
+        font-size: 1.2rem;
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .textarea-wrapper textarea {
         resize: vertical;
+        min-height: 80px;
     }
     
+    /* Radio buttons mejorados */
     .radio-group {
         display: flex;
-        gap: var(--spacing-md);
+        flex-direction: column;
+        gap: var(--spacing-sm);
     }
     
-    .radio-label {
+    .festive-option {
         display: flex;
         align-items: center;
         cursor: pointer;
+        padding: var(--spacing-sm);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        position: relative;
     }
     
-    .radio-label input {
-        margin-right: var(--spacing-xs);
-        width: auto;
+    .festive-option:hover {
+        background: rgba(196, 30, 58, 0.05);
+        border-color: rgba(196, 30, 58, 0.2);
+        transform: translateX(5px);
     }
     
-    .rsvp-submit {
+    .festive-option input[type="radio"] {
+        display: none;
+    }
+    
+    .radio-custom {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #c41e3a;
+        border-radius: 50%;
+        margin-right: var(--spacing-sm);
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .festive-option input[type="radio"]:checked + .radio-custom {
+        background: #c41e3a;
+        box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.2);
+    }
+    
+    .festive-option input[type="radio"]:checked + .radio-custom::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+    }
+    
+    .radio-text {
+        font-weight: 500;
+        color: #2c3e50;
+    }
+    
+    /* Botón mágico */
+    .magical-button {
         width: 100%;
         margin-top: var(--spacing-md);
         padding: var(--spacing-md);
+        background: linear-gradient(45deg, #c41e3a, #e74c3c, #c41e3a);
+        background-size: 200% 200%;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        animation: shimmer 3s ease-in-out infinite;
+    }
+    
+    .magical-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(196, 30, 58, 0.4);
+    }
+    
+    .button-sparkles {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        display: flex;
+        gap: 0.3rem;
+    }
+    
+    .button-sparkles span {
+        animation: sparkleButton 2s ease-in-out infinite;
+    }
+    
+    .button-sparkles span:nth-child(1) { animation-delay: 0s; }
+    .button-sparkles span:nth-child(2) { animation-delay: 0.7s; }
+    .button-sparkles span:nth-child(3) { animation-delay: 1.4s; }
+    
+    @keyframes shimmer {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+    
+    @keyframes sparkleButton {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.3); }
     }
     
     .rsvp-confirmation {
@@ -132,25 +461,51 @@
         text-align: center;
         max-width: 500px;
         margin: 0 auto;
-        background-color: var(--color-background);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
         padding: var(--spacing-lg);
-        border-radius: var(--border-radius-lg);
-        box-shadow: var(--shadow-md);
+        border-radius: 20px;
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.3),
+            0 0 0 1px rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(34, 197, 94, 0.3);
+        position: relative;
+        z-index: 2;
     }
     
     .rsvp-confirmation i {
         font-size: var(--font-size-3xl);
-        color: var(--color-primary);
+        color: #22c55e;
         margin-bottom: var(--spacing-md);
     }
     
     .rsvp-confirmation h3 {
         margin-bottom: var(--spacing-sm);
+        color: #2c3e50;
     }
-
-    form {
-        border-radius: 50%;
-
+    
+    /* Responsividad */
+    @media (max-width: 768px) {
+        .magical-title {
+            font-size: 1.5rem;
+        }
+        
+        .floating-decoration {
+            font-size: 1.5rem;
+        }
+        
+        .radio-group {
+            gap: var(--spacing-xs);
+        }
+        
+        .festive-option {
+            padding: var(--spacing-xs);
+        }
+        
+        .rsvp-form {
+            margin: 0 var(--spacing-md);
+            padding: var(--spacing-md);
+        }
     }
 </style>
 

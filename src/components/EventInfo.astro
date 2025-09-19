@@ -1,16 +1,16 @@
 <section class="section event-info-section">
     <div class="container">
         <div class="event-cards">
-            <div class="event-card ceremony-card animate-slide-left">
+            <div class="event-card dinner-card animate-slide-left">
                 <div class="event-icon">
-                    <i class="fas fa-church"></i>
+                    🍽️
                 </div>
-                <h3>Ceremonia</h3>
+                <h3>Cena Navideña</h3>
                 <div class="event-details">
-                    <p class="event-date">06 de Septiembre, 2025</p>
-                    <p class="event-time">13:00 hs</p>
-                    <p class="event-location">Iglesia Nuestra Señora del Carmen</p>
-                    <p class="event-address">Villa Allende, Córdoba</p>
+                    <p class="event-date">24 de Diciembre, 2024</p>
+                    <p class="event-time">20:00 hs</p>
+                    <p class="event-location">Salón de Eventos "La Navidad"</p>
+                    <p class="event-address">Centro, Ciudad</p>
                 </div>
                 <a href="https://maps.app.goo.gl/" class="btn btn-primary" target="_blank">
                     <i class="fas fa-map-marker-alt"></i> Cómo llegar
@@ -19,17 +19,17 @@
 
             <div class="event-card party-card animate-slide-right">
                 <div class="event-icon">
-                    <i class="fas fa-glass-cheers"></i>
+                    🎉
                 </div>
-                <h3>Fiesta</h3>
+                <h3>Fiesta & Baile</h3>
                 <div class="event-details">
-                    <p class="event-date">06 de Septiembre, 2025</p>
-                    <p class="event-time">14:30 hs</p>
-                    <p class="event-location">Salón de Eventos Rincón Calina</p>
-                    <p class="event-address">Unquillo, Córdoba</p>
+                    <p class="event-date">24 de Diciembre, 2024</p>
+                    <p class="event-time">22:00 hs</p>
+                    <p class="event-location">Mismo lugar - Pista de baile</p>
+                    <p class="event-address">¡Música, baile y diversión hasta el amanecer!</p>
                 </div>
-                <a href="https://maps.app.goo.gl/" class="btn btn-primary" target="_blank">
-                    <i class="fas fa-map-marker-alt"></i> Cómo llegar
+                <a href="#playlist" class="btn btn-primary">
+                    <i class="fas fa-music"></i> Ver playlist
                 </a>
             </div>
         </div>
@@ -60,12 +60,12 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .ceremony-card {
-        border-top: 4px solid var(--color-ceremony);
+    .dinner-card {
+        border-top: 4px solid #d4af37; /* Dorado navideño */
     }
 
     .party-card {
-        border-top: 4px solid var(--color-party);
+        border-top: 4px solid #c41e3a; /* Rojo navideño */
     }
 
     .event-card:hover {
@@ -74,9 +74,10 @@
     }
 
     .event-icon {
-        font-size: var(--font-size-3xl);
+        font-size: 3rem;
         margin-bottom: var(--spacing-md);
         color: var(--color-primary);
+        line-height: 1;
     }
 
     .event-card h3 {

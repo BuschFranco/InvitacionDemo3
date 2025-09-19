@@ -1,0 +1,249 @@
+---
+// Componente de Tradiciones Navideñas
+---
+
+<section class="christmas-traditions">
+    <div class="container">
+        <h2 class="section-title">🎄 Tradiciones Mágicas de la Noche 🎄</h2>
+        <p class="section-subtitle">Únete a nosotros en estas actividades especiales que harán de esta noche algo inolvidable</p>
+        
+        <div class="traditions-grid">
+            <div class="tradition-card animate-slide-up">
+                <div class="tradition-icon">🎅</div>
+                <h3>Llegada de Santa</h3>
+                <p class="tradition-time">8:30 PM</p>
+                <p class="tradition-description">¡Santa Claus hará una aparición especial con regalos sorpresa para todos!</p>
+            </div>
+
+            <div class="tradition-card animate-slide-up">
+                <div class="tradition-icon">🎵</div>
+                <h3>Villancicos en Vivo</h3>
+                <p class="tradition-time">9:00 PM</p>
+                <p class="tradition-description">Cantaremos villancicos tradicionales acompañados de música en vivo.</p>
+            </div>
+
+            <div class="tradition-card animate-slide-up">
+                <div class="tradition-icon">🍪</div>
+                <h3>Decoración de Galletas</h3>
+                <p class="tradition-time">9:30 PM</p>
+                <p class="tradition-description">Estación de decoración de galletas navideñas para niños y adultos.</p>
+            </div>
+
+            <div class="tradition-card animate-slide-up">
+                <div class="tradition-icon">📸</div>
+                <h3>Foto con Santa</h3>
+                <p class="tradition-time">10:00 PM</p>
+                <p class="tradition-description">Sesión de fotos profesional con Santa Claus y decoración navideña.</p>
+            </div>
+
+            <div class="tradition-card animate-slide-up">
+                <div class="tradition-icon">🎁</div>
+                <h3>Intercambio Mágico</h3>
+                <p class="tradition-time">10:30 PM</p>
+                <p class="tradition-description">Intercambio de regalos sorpresa con un toque de magia navideña.</p>
+            </div>
+
+            <div class="tradition-card animate-slide-up">
+                <div class="tradition-icon">✨</div>
+                <h3>Deseos de Medianoche</h3>
+                <p class="tradition-time">11:45 PM</p>
+                <p class="tradition-description">Ceremonia especial para compartir nuestros deseos para el nuevo año.</p>
+            </div>
+        </div>
+
+        <div class="special-note">
+            <div class="note-icon">🌟</div>
+            <p><strong>Nota Especial:</strong> Habrá sorpresas adicionales durante toda la noche. ¡Mantén los ojos abiertos para la magia inesperada!</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .christmas-traditions {
+        background: linear-gradient(135deg, #0f4c3a, #1a5f4a);
+        padding: var(--spacing-xl) 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .christmas-traditions::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(220, 20, 60, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 40% 60%, rgba(46, 139, 87, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: var(--font-size-3xl);
+        color: #ffd700;
+        margin-bottom: var(--spacing-md);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: var(--font-size-lg);
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: var(--spacing-xl);
+        font-style: italic;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .traditions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .tradition-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        border-radius: var(--border-radius-lg);
+        padding: var(--spacing-lg);
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .tradition-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .tradition-card:hover::before {
+        left: 100%;
+    }
+
+    .tradition-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+        border-color: #ffd700;
+    }
+
+    .tradition-icon {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-md);
+        animation: bounce 2s ease-in-out infinite;
+    }
+
+    .tradition-card h3 {
+        color: #ffd700;
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-sm);
+        font-weight: 600;
+    }
+
+    .tradition-time {
+        color: #ff6b6b;
+        font-size: var(--font-size-lg);
+        font-weight: 700;
+        margin-bottom: var(--spacing-md);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .tradition-description {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: var(--font-size-md);
+        line-height: 1.6;
+    }
+
+    .special-note {
+        background: rgba(255, 215, 0, 0.1);
+        border: 2px solid #ffd700;
+        border-radius: var(--border-radius-lg);
+        padding: var(--spacing-lg);
+        text-align: center;
+        position: relative;
+        animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    .note-icon {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-sm);
+        animation: twinkle 1.5s ease-in-out infinite alternate;
+    }
+
+    .special-note p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: var(--font-size-lg);
+        margin: 0;
+    }
+
+    .special-note strong {
+        color: #ffd700;
+    }
+
+    @keyframes twinkle {
+        0% { opacity: 0.7; transform: scale(1); }
+        100% { opacity: 1; transform: scale(1.05); }
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+    }
+
+    @keyframes glow {
+        0% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+        100% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+    }
+
+    .animate-slide-up {
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slideUp 0.8s ease-out forwards;
+    }
+
+    .tradition-card:nth-child(1) { animation-delay: 0.1s; }
+    .tradition-card:nth-child(2) { animation-delay: 0.2s; }
+    .tradition-card:nth-child(3) { animation-delay: 0.3s; }
+    .tradition-card:nth-child(4) { animation-delay: 0.4s; }
+    .tradition-card:nth-child(5) { animation-delay: 0.5s; }
+    .tradition-card:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes slideUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .traditions-grid {
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+        }
+
+        .tradition-card {
+            padding: var(--spacing-md);
+        }
+
+        .section-title {
+            font-size: var(--font-size-2xl);
+        }
+
+        .section-subtitle {
+            font-size: var(--font-size-md);
+        }
+    }
+</style>
